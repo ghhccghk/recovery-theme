@@ -2053,10 +2053,10 @@
 				<condition var1="tw_fm_isfolder" var2="1"/>
 				<condition var1="tw_hold" var2="1"/>
 				<action function="terminalcommand">
-				cd '%tw_filename1%'; [ -x /sbin/zip ] && zip -r%tw_pack_lvl% '%tw_filename1%.zip' . || echo "- Error - zip binary not found";
+				cd '%tw_filename1%'; [ -x /sbin/zip -o -x /system/bin/zip ] && zip -r%tw_pack_lvl% '%tw_filename1%.zip' . || echo "- Error - zip binary not found";
 				</action>
 				<!--action function="terminalcommand">
-				[ -x /sbin/zip ] && zip -r%tw_pack_lvl% '%tw_filename1%.zip' $(basename '%tw_filename1%') || echo "- Error - zip binary not found";
+				[ -x /sbin/zip -o -x /system/bin/zip ] && zip -r%tw_pack_lvl% '%tw_filename1%.zip' $(basename '%tw_filename1%') || echo "- Error - zip binary not found";
 				</action-->
 				<action function="set">tw_extract_action=0</action>
 			</action>
@@ -2065,7 +2065,7 @@
 				<condition var1="tw_artype" var2="0"/>
 				<condition var1="tw_extract_action" var2="1"/>
 				<condition var1="tw_fm_isfolder" op="!=" var2="1"/>
-				<action function="terminalcommand">[ -x /sbin/zip ] && zip -j -%tw_pack_lvl% '%tw_filename1%.zip' '%tw_filename1%' || pigz -%tw_pack_lvl%vkKf '%tw_filename1%';</action>
+				<action function="terminalcommand">[ -x /sbin/zip -o -x /system/bin/zip ] && zip -j -%tw_pack_lvl% '%tw_filename1%.zip' '%tw_filename1%' || pigz -%tw_pack_lvl%vkKf '%tw_filename1%';</action>
 				<action function="set">tw_extract_action=0</action>
 			</action>
 
