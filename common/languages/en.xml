@@ -800,7 +800,8 @@
 		<string name="enable_adb">Enable ADB</string>
 		<string name="enable_fastboot">Enable Fastboot</string>
 		<string name="fastboot_console_msg">Entered Fastboot mode...</string>
-		
+		<string name="data_media_fbe_msg">OrangeFox will not recreate /data/media on an FBE device. Please reboot into your rom to create /data/media</string>
+
 		<!-- Console Messages -->
 		<string name="fox_incremental_ota_compatibility_chk">Verifying Incremental Package Signature...</string>
 		<string name="fox_incremental_ota_compatibility_false">Incremental package isn't compatible with this ROM!</string>
@@ -1197,5 +1198,7 @@
 		<string name="recovery_busy">Recovery is busy</string>
 		<string name="status_delimeter">Status bar delimiter</string>
 		<string name="status_delimeter_shadow">Shadow</string>
+
+		<string name="mount_vab_partitions">Devices on super may not mount until rebooting recovery.</string>
 	</resources>
 </language>
