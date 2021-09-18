@@ -131,6 +131,7 @@
 					<condition var1="utils_show" var2="1"/>
 					<condition var1="tw_has_boot_slots" var2="1"/>
 					<condition var1="tw_has_repack_tools" var2="1"/>
+					<condition var1="tw_uses_initramfs" var2="1"/>
 					<action function="set">tw_back=advanced</action>
 					<action function="set">tw_action=fixabrecoverybootloop</action>
 					<action function="set">tw_text1={@fix_recovery_loop_confirm}</action>
