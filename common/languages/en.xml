@@ -376,7 +376,7 @@
 		<string name="installing">Installing...</string>
 		<string name="install_complete">Install Complete</string>
 		<string name="decrypt_users">Decrypt Users</string>
-		<string name="backup_storage_undecrypt_warning">Backup not include some files of user {1}, because the user is not decrypted.</string>
+		<string name="backup_storage_undecrypt_warning">Backup does not include some files of user {1}, because the user is not decrypted.</string>
 		<string name="decrypting_user_fbe">Attempting to decrypt FBE for user {1}...</string>
 		<string name="decrypt_user_success_fbe">User {1} Decrypted Successfully</string>
 		<string name="decrypt_user_fail_fbe">Failed to decrypt user {1}</string>
