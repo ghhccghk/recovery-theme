@@ -1155,7 +1155,7 @@
 		<string name="img_advanced">Advanced Flashing</string>
 		<string name="img_type">Image Type</string>
 		<string name="img_select_type">Select Image Type</string>
-		
+		<string name="repack_overwrite_warning">If device was previously rooted, then root has been overwritten and will need to be reinstalled.</string>		
 		<string name="recovery_ramdisk">Recovery Ramdisk</string>
 		<string name="kernel">Kernel</string>
 
