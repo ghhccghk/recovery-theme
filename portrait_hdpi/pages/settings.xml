@@ -120,6 +120,80 @@
 			</action>
 		</page>
 
+		<!-- settings for Wipe, Mount and Terminal -->
+		<page name="ext_context">
+			<template name="base"/>
+
+			<text style="text_ab_title">
+				<placement x="%col1_x_indent%" y="%ab_bc_y%"/>
+				<condition var1="general_back" var2="terminal"/>
+				<text>{@term_s_hdr}</text>
+			</text>
+
+			<text style="text_ab_title">
+				<placement x="%col1_x_indent%" y="%ab_bc_y%"/>
+				<condition var1="general_back" var2="wipe"/>
+				<text>{@wipe_hdr}</text>
+			</text>
+
+			<text style="text_ab_title">
+				<placement x="%col1_x_indent%" y="%ab_bc_y%"/>
+				<condition var1="general_back" var2="mount"/>
+				<text>{@mount_hdr}</text>
+			</text>
+
+			<text style="caption">
+				<placement x="%col1_x_caption%" y="%row1_1_y%"/>
+				<text>{@options_hdr}</text>
+			</text>
+
+			<listbox style="settingslist">
+				<placement x="0" y="%row1_2_y%" w="%screen_w%" h="%lb_l5%"/>
+				<listitem name="{@mount_sys_ro_chk}">
+					<condition var1="general_back" var2="mount"/>
+					<condition var1="tw_mount_system_ro" op="!=" var2="0"/>
+					<icon res="checkbox_true"/>
+					<action function="set">tw_lifetime_writes=2</action>
+					<action function="page">system_readonly_check</action>
+				</listitem>
+				<listitem name="{@mount_sys_ro_chk}">
+					<condition var1="general_back" var2="mount"/>
+					<condition var1="tw_mount_system_ro" var2="0"/>
+					<icon res="checkbox_false"/>
+					<action function="mountsystemtoggle">1</action>
+				</listitem>
+				<listitem name="{@unmount_sys_install}">
+					<condition var1="general_back" var2="mount"/>
+					<data variable="tw_unmount_system"/>
+				</listitem>
+				<listitem name="{@unmount_vendor_install}">
+					<condition var1="general_back" var2="mount"/>
+					<condition var1="fox_branch" op="&gt;=" var2="10"/>
+					<data variable="tw_unmount_vendor"/>
+				</listitem>
+				<listitem name="{@use_rmrf_chk}">
+					<condition var1="general_back" var2="wipe"/>
+					<data variable="tw_rm_rf"/>
+				</listitem>
+				<listitem name="{@use_fixed_font}">
+					<condition var1="general_back" var2="terminal"/>
+					<data variable="use_fixed_font"/>
+				</listitem>
+			</listbox>
+
+			<template name="gestures"/>
+
+			<action>
+				<touch key="home"/>
+				<action function="page">main</action>
+			</action>
+
+			<action>
+				<touch key="back"/>
+				<action function="page">%general_back%</action>
+			</action>
+		</page>
+
 		<!-- General -->
 		<page name="ext_general">
 			<template name="base"/>
@@ -150,87 +224,71 @@
 			<listbox style="settingslist">
 				<placement x="0" y="%row2_2_y%" w="%screen_w%" h="%lb_l10%"/>
 				<listitem name="{@mount_sys_ro_chk}">
-					<condition var1="general_back" op="!=" var2="wipe"/>
 					<icon res="checkbox_true"/>
 					<condition var1="tw_mount_system_ro" op="!=" var2="0"/>
 					<action function="set">tw_lifetime_writes=2</action>
 					<action function="page">system_readonly_check</action>
 				</listitem>
 				<listitem name="{@mount_sys_ro_chk}">
-					<condition var1="general_back" op="!=" var2="wipe"/>
 					<condition var1="tw_mount_system_ro" var2="0"/>
 					<icon res="checkbox_false"/>
 					<action function="mountsystemtoggle">1</action>
 				</listitem>
 				<listitem name="{@use_rmrf_chk}">
-					<condition var1="general_back" op="!=" var2="mount"/>
 					<data variable="tw_rm_rf"/>
 				</listitem>
 				<listitem name="{@zip_sig_chk}">
 					<data variable="tw_signed_zip_verify"/>
-					<condition var1="general_back" var2="settings"/>
 				</listitem>
 				<listitem name="{@restoredialog_readonly}">
 					<data variable="tw_never_show_system_ro_page"/>
-					<condition var1="general_back" var2="settings"/>
 				</listitem>
 				<listitem name="{@fox_boot_fastcharge}">
-					<condition var1="general_back" var2="settings"/>
 					<data variable="fox_boot_fastcharge_check"/>
 				</listitem>
 				<listitem name="{@files_auto_open}">
 					<data variable="fm_auto_open"/>
-					<condition var1="general_back" var2="settings"/>
 				</listitem>
 				<listitem name="{@files_show_hidden}">
 					<data variable="tw_hidden_files"/>
-					<condition var1="general_back" var2="settings"/>
 				</listitem>
-				<listitem name="{@unmount_sys_install=Unmount System before installing a ZIP}">
-					<condition var1="general_back" op="!=" var2="wipe"/>
+				<listitem name="{@unmount_sys_install}">
 					<data variable="tw_unmount_system"/>
 				</listitem>
-				<listitem name="{@unmount_vendor_install=Unmount Vendor before installing a ZIP}">
-					<condition var1="general_back" op="!=" var2="wipe"/>
+				<listitem name="{@unmount_vendor_install}">
 					<condition var1="fox_branch" op="&gt;=" var2="10"/>
 					<data variable="tw_unmount_vendor"/>
 				</listitem>
 				<listitem name="{@inject_twrp_chk}">
 					<condition var1="tw_has_injecttwrp" var2="1"/>
-					<condition var1="general_back" var2="settings"/>
 					<data variable="tw_inject_after_zip"/>
 				</listitem>
 			</listbox>
 			
 			<text style="caption">
 				<placement x="%col1_x_caption%" y="%row1_1_y%"/>
-				<condition var1="general_back" var2="settings"/>
 				<text>{@perf_conf_mode}</text>
 			</text>
 			
 			<text style="text_body1">
-				<condition var1="general_back" var2="settings"/>
 				<condition var1="fox_boot_performance_check" var2="1"/>
 				<placement x="%col1_x_caption%" y="%row1_2_y%"/>
 				<text>{@perf_conf_high}</text>
 			</text>
 			
 			<text style="text_body1">
-				<condition var1="general_back" var2="settings"/>
 				<condition var1="fox_boot_powersave_check" var2="1"/>
 				<placement x="%col1_x_caption%" y="%row1_2_y%"/>
 				<text>{@perf_conf_batt}</text>
 			</text>
 			
 			<text style="text_body1">
-				<condition var1="general_back" var2="settings"/>
 				<condition var1="fox_boot_balance_check" var2="1"/>
 				<placement x="%col1_x_caption%" y="%row1_2_y%"/>
 				<text>{@perf_conf_balance}</text>
 			</text>
 
 			<button style="menu_btn">
-				<condition var1="general_back" var2="settings"/>
 				<placement x="%col1_x_caption%" y="%row1_1_y%" w="%input_w%" h="%mb_h_hide%"/>
 				<action function="page">ext_gov</action>
 			</button>
@@ -252,7 +310,7 @@
 
 			<action>
 				<touch key="back"/>
-				<action function="page">%general_back%</action>
+				<action function="page">settings</action>
 			</action>
 		</page>
 		

@@ -681,7 +681,7 @@
 
 			<listbox style="settingslist">
 				<placement x="0" y="%row1_2_y%" w="%screen_w%" h="%lb_l6%"/>
-				<listitem name="{@use_fixed_font}">
+				<listitem name="{@use_fixed_font}"> <!-- also in ext_context -->
 					<data variable="use_fixed_font"/>
 				</listitem>
 				<listitem name="{@fm_icons_simple}">
