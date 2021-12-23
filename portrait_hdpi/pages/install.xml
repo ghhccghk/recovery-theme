@@ -449,6 +449,7 @@
 			</partitionlist>
 			
 			<text style="caption">
+				<condition var1="fox_branch" op="&gt;=" var2="11"/>
 				<condition var1="tw_is_slot_part" var2="1"/>
 				<condition var1="tw_has_boot_slots" var2="1"/>
 				<placement x="%col1_x_caption%" y="%row5_3a_y%"/>
@@ -456,6 +457,7 @@
 			</text>
 
 			<listbox style="settingslist">
+				<condition var1="fox_branch" op="&gt;=" var2="11"/>
 				<condition var1="tw_is_slot_part" var2="1"/>
 				<condition var1="tw_has_boot_slots" var2="1"/>
 				<placement x="0" y="%row6_1a_y%" w="%screen_w%" h="%lb_l1%"/>
