@@ -1257,8 +1257,7 @@
 		<string name="unpacking_image">Распаковка {1}...</string>
 		<string name="repacking_image">Перепаковка {1}...</string>
 		
-		<string name="fix_recovery_loop">Исправить bootloop</string>
-		<string name="fix_recovery_loop_confirm">Исправить Bootloop</string>
+		<string name="fix_recovery_loop">Исправить Bootloop</string>
 		<string name="fixing_recovery_loop">Исправление Bootloop'a...</string>
 		<string name="fix_recovery_loop_complete">Исправление Bootloop'a завершено</string>
 		<string name="fixing_recovery_loop_patch">Исправление ядра...</string>
@@ -1288,5 +1287,14 @@
 
 		<string name="status_delimeter">Разделитель заголовка</string>
 		<string name="status_delimeter_shadow">Тень</string>
+		
+		<string name="merges_snapshots">Слияние снапшотов</string>
+		<string name="merging_snapshots">Слияние снапшотов...</string>
+		<string name="merging_snapshots_complete">Слияние выполнено</string>
+		
+		<string name="unmap_super_devices">Отключить Super разделы</string>
+		<string name="unmapping_super_devices">Отключение всех Super разделов...</string>
+		<string name="unmap_super_devices_complete">Отлючены все Super разделы</string>
+		<string name="mount_vab_partitions">Super-разделы могут не монтироваться до перезагрузки рекавери.</string>
 	</resources>
 </language>

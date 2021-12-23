@@ -1167,7 +1167,6 @@
 		<string name="repacking_image">Repacking {1}...</string>
 		
 		<string name="fix_recovery_loop">Fix Recovery Bootloop</string>
-		<string name="fix_recovery_loop_confirm">Fix Recovery Bootloop?</string>
 		<string name="fixing_recovery_loop">Fixing Recovery Bootloop...</string>
 		<string name="fix_recovery_loop_complete">Fix Recovery Bootloop Complete</string>
 		<string name="fixing_recovery_loop_patch">Patching kernel...</string>
@@ -1201,5 +1200,12 @@
 		<string name="status_delimeter_shadow">Shadow</string>
 
 		<string name="mount_vab_partitions">Devices on super may not mount until rebooting recovery.</string>
+		<string name="merges_snapshots">Merge Snapshots</string>
+		<string name="merging_snapshots">Merging Snapshots...</string>
+		<string name="merging_snapshots_complete">Merged Snapshots</string>
+		
+		<string name="unmap_super_devices">Unmap Super Devices</strings>
+		<string name="unmapping_super_devices">Unmapping Super Devices...</string>
+		<string name="unmap_super_devices_complete">Unmapped all Super Devices</string>
 	</resources>
 </language>
