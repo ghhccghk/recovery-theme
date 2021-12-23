@@ -1019,7 +1019,7 @@
 		<string name="appmgr_title">App Manager</string>
 
 		<!-- performance -->
-		<string name="perf_title">performance</string>
+		<string name="perf_title">Performance</string>
 		<string name="perf_conf_mode">Recovery performance mode</string>
 		<string name="perf_conf_balance">Balanced</string>
 		<string name="perf_conf_high">High performance</string>
