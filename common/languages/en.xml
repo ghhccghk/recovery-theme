@@ -1152,12 +1152,10 @@
 		<string name="backup_encrypt_data_info">Only Data partition will be encrypted</string>
 		
 		<!-- Missing functions from TWRP -->
-		<string name="img_advanced">Advanced Flashing</string>
+		<string name="img_advanced">Install Ramdisk</string>
 		<string name="img_type">Image Type</string>
 		<string name="img_select_type">Select Image Type</string>
 		<string name="repack_overwrite_warning">If device was previously rooted, then root has been overwritten and will need to be reinstalled.</string>		
-		<string name="recovery_ramdisk">Recovery Ramdisk</string>
-		<string name="kernel">Kernel</string>
 
 		<string name="repack_backup_first">Back up existing image first</string>
 
@@ -1207,5 +1205,12 @@
 		<string name="unmap_super_devices">Unmap Super Devices</string>
 		<string name="unmapping_super_devices">Unmapping Super Devices...</string>
 		<string name="unmap_super_devices_complete">Unmapped all Super Devices</string>
+
+		<string name="auto_reflashtwrp_chk">Auto-reflash OrangeFox after flashing a ROM</string>
+		<string name="modified_ramdisk_error">ramdisk files have been modified, unable to create ramdisk to flash. fastboot boot OrangeFox and try this option again or go back to Files and install img file as Recovery Ramdisk using Install Ramdisk button.</string>
+		<string name="create_ramdisk_error">failed to create ramdisk to flash.</string>
+		<string name="reflash_twrp">Flash current OrangeFox</string>
+		<string name="reflashing_twrp">Flashing OrangeFox...</string>
+		<string name="reflash_twrp_complete">Done flashing OrangeFox</string>
 	</resources>
 </language>

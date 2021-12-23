@@ -1246,7 +1246,7 @@
 		<string name="backup_encrypt_data_info">Будет зашифрован только раздел /data</string>
 
 		<!-- Missing functions from TWRP -->
-		<string name="img_advanced">Прошить ядро</string>
+		<string name="img_advanced">Прошить Ramdisk</string>
 		<string name="img_type">Тип образа</string>
 		<string name="img_select_type">Выберите тип образа</string>
 
@@ -1296,5 +1296,12 @@
 		<string name="unmapping_super_devices">Отключение всех Super разделов...</string>
 		<string name="unmap_super_devices_complete">Отлючены все Super разделы</string>
 		<string name="mount_vab_partitions">Super-разделы могут не монтироваться до перезагрузки рекавери.</string>
+
+		<string name="auto_reflashtwrp_chk">Переустановка OrangeFox после прошивки</string>
+		<string name="modified_ramdisk_error">файлы Ramdisk'а были изменены, невозможно создать Ramdisk для прошивки. Загрузитесь с помощью fastboot boot и попытайтесь снова, либо вернитесь в "Файлы" и прошейте img файл как "Recovery Ramdisk" через меню "Прошить Ramdisk".</string>
+		<string name="create_ramdisk_error">ошибка создания Ramdisk'а для прошивки.</string>
+		<string name="reflash_twrp">Прошить текущий OrangeFox</string>
+		<string name="reflashing_twrp">Прошивка OrangeFox...</string>
+		<string name="reflash_twrp_complete">OrangeFox прошит</string>
 	</resources>
 </language>

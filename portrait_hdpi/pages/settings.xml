@@ -186,14 +186,21 @@
 					<data variable="tw_hidden_files"/>
 					<condition var1="general_back" var2="settings"/>
 				</listitem>
-				<listitem name="{@unmount_sys_install=Unmount System before installing a ZIP}">
+				<listitem name="{@unmount_sys_install}">
 					<condition var1="general_back" op="!=" var2="wipe"/>
 					<data variable="tw_unmount_system"/>
 				</listitem>
-				<listitem name="{@unmount_vendor_install=Unmount Vendor before installing a ZIP}">
+				<listitem name="{@unmount_vendor_install}">
 					<condition var1="general_back" op="!=" var2="wipe"/>
 					<condition var1="fox_branch" op="&gt;=" var2="10"/>
 					<data variable="tw_unmount_vendor"/>
+				</listitem>
+				<listitem name="{@auto_reflashtwrp_chk}">
+					<condition var1="fox_branch" op="&gt;=" var2="11"/>
+					<condition var1="general_back" op="!=" var2="wipe"/>
+					<condition var1="tw_has_boot_slots" var2="1"/>
+					<condition var1="tw_has_repack_tools" var2="1"/>
+					<data variable="tw_auto_reflashtwrp"/>
 				</listitem>
 				<listitem name="{@inject_twrp_chk}">
 					<condition var1="tw_has_injecttwrp" var2="1"/>
