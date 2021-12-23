@@ -550,6 +550,7 @@
 				<action function="set">tw_filename=%tw_filename1%</action>
 				<action function="set">tw_zip_location=%tw_file_location1%</action>
 				<action function="set">tw_flash_partition=</action>
+				<action function="set">tw_is_slot_part=0</action>
 				<action function="page">flash_image_confirm</action>
 			</action>
 
@@ -561,6 +562,7 @@
 				<action function="set">tw_filename=%tw_filename1%</action>
 				<action function="set">tw_zip_location=%tw_file_location1%</action>
 				<action function="set">tw_flash_partition=</action>
+				<action function="set">tw_is_slot_part=0</action>
 				<action function="page">flash_image_confirm</action>
 			</action>
 
@@ -1214,6 +1216,7 @@
 					<action function="set">tw_filename=%tw_filename1%</action>
 					<action function="set">tw_zip_location=%tw_file_location1%</action>
 					<action function="set">tw_flash_partition=</action>
+					<action function="set">tw_is_slot_part=0</action>
 					<action function="page">flash_image_confirm</action>
 				</listitem>
 				<listitem name="{@fm_open_backup}">
