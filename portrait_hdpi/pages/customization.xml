@@ -900,7 +900,7 @@
 				<action function="set">of_reload_back=ext_custom_fonts</action>
 			</action>
 			
-			<template name="base"/>
+			<template name="body"/>
 			<template name="tabs"/>
 			<template name="actionbar_back"/>
 
@@ -1024,7 +1024,7 @@
 				<action function="set">of_reload_back=ext_custom_fonts_sec</action>
 			</action>
 			
-			<template name="base"/>
+			<template name="body"/>
 			<template name="tabs"/>
 			<template name="actionbar_back"/>
 
@@ -1148,7 +1148,7 @@
 				<action function="set">of_reload_back=ext_custom_fonts_size</action>
 			</action>
 			
-			<template name="base"/>
+			<template name="body"/>
 			<template name="tabs"/>
 			<template name="actionbar_back"/>
 
