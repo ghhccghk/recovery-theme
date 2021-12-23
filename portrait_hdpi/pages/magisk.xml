@@ -198,8 +198,8 @@
 					file="%mmgui_file%/disable"
 					var="twrp xset mmodule_disable="
 
-					if [ -f "$file" ]; then rm "$file" && ${var}0
-					else touch "$file" && ${var}1; fi
+					if [ -f "$file" ]; then rm "$file" &amp;&amp; ${var}0
+					else touch "$file" &amp;&amp; ${var}1; fi
 				</action>
 				<action function="page">magisk_actions</action>
 			</button>
@@ -258,17 +258,17 @@
 				<listitem name="{@mm_module_mount}">
 					<condition var1="mmodule_auto_mount" op="!=" var2="0"/>
 					<icon res="checkbox_true"/>
-					<action function="ftls">rm "%mmgui_file%/auto_mount" && twrp xset mmodule_auto_mount=0</action>
+					<action function="ftls">rm "%mmgui_file%/auto_mount" &amp;&amp; twrp xset mmodule_auto_mount=0</action>
 				</listitem>
 				<listitem name="{@mm_module_mount}">
 					<condition var1="mmodule_auto_mount" var2="0"/>
 					<icon res="checkbox_false"/>
-					<action function="ftls">touch "%mmgui_file%/auto_mount" && twrp xset mmodule_auto_mount=1</action>
+					<action function="ftls">touch "%mmgui_file%/auto_mount" &amp;&amp; twrp xset mmodule_auto_mount=1</action>
 				</listitem>
 				<listitem name="{@mm_remove}">
 					<condition var1="mmodule_remove" op="!=" var2="0"/>
 					<icon res="checkbox_true"/>
-					<action function="ftls">rm "%mmgui_file%/remove" && twrp xset mmodule_remove=0</action>
+					<action function="ftls">rm "%mmgui_file%/remove" &amp;&amp; twrp xset mmodule_remove=0</action>
 				</listitem>
 				<listitem name="{@mm_remove}">
 					<condition var1="mmodule_remove" var2="0"/>
@@ -336,7 +336,7 @@
 
 				<slider style="slider_action">
 					<placement x="%center_x%" y="%slider_y%" placement="5"/>
-					<action function="ftls">touch "%mmgui_file%/remove" && twrp xset mmodule_remove=1</action>
+					<action function="ftls">touch "%mmgui_file%/remove" &amp;&amp; twrp xset mmodule_remove=1</action>
 					<action function="page">magisk_actions</action>
 				</slider>
 

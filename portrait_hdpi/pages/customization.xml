@@ -1927,8 +1927,8 @@
 			<action>
 				<action function="ftls">
 					#Remove theme
-					if [[ '%remove_theme%' = '1' ]] || [[ '%theme_pie_tmp%' = '1' && '%theme_style_tmp%' = 'Night' && '%theme_accent_tmp%' = 'Orange' && '%theme_font_tmp%' = 'Roboto' && '%theme_sec_font_tmp%' = 'GoogleSans' && '%theme_font_size_tmp%' = 'n' ]]; then
-						[ -d "/sdcard/Fox/.theme" ] && rm -rf /sdcard/Fox/.theme;
+					if [[ '%remove_theme%' = '1' ]] || [[ '%theme_pie_tmp%' = '1' &amp;&amp; '%theme_style_tmp%' = 'Night' &amp;&amp; '%theme_accent_tmp%' = 'Orange' &amp;&amp; '%theme_font_tmp%' = 'Roboto' &amp;&amp; '%theme_sec_font_tmp%' = 'GoogleSans' &amp;&amp; '%theme_font_size_tmp%' = 'n' ]]; then
+						[ -d "/sdcard/Fox/.theme" ] &amp;&amp; rm -rf /sdcard/Fox/.theme;
 						[[ '%update_navbar%' = '1' ]] || exit;
 					else
 						if [ ! -d "/sdcard/Fox/.theme" ]; then mkdir -p "/sdcard/Fox/.theme"; fi;
@@ -1939,8 +1939,8 @@
 						medfont=Medium;
 						regfont=Regular;
 
-						[[ '%theme_font_weight_tmp%' = '1' ]] && medfont=Regular;
-						[[ '%theme_font_weight_tmp%' = '2' ]] && regfont=Medium;
+						[[ '%theme_font_weight_tmp%' = '1' ]] &amp;&amp; medfont=Regular;
+						[[ '%theme_font_weight_tmp%' = '2' ]] &amp;&amp; regfont=Medium;
 
 						if [ -f "/twres/fonts/%theme_sec_font_tmp%.ttf" ];
 							then sec_med=;
@@ -2057,9 +2057,9 @@
 				<action function="wlfw"/>
 				<action function="cmd">
 						if [[ '%spl_bg_user%' = '1' ]]; then
-							[[ '%spl_logo_type%' = 'o' ]] && logo_color=F86314;
-							[[ '%spl_logo_type%' = 'w' ]] && logo_color=ffffff;
-							[[ '%spl_logo_type%' = 'd' ]] && logo_color=353535;
+							[[ '%spl_logo_type%' = 'o' ]] &amp;&amp; logo_color=F86314;
+							[[ '%spl_logo_type%' = 'w' ]] &amp;&amp; logo_color=ffffff;
+							[[ '%spl_logo_type%' = 'd' ]] &amp;&amp; logo_color=353535;
 
 							if [[ '%spl_logo_type%' = '0' ]];
 								then logo_on=!--;
@@ -2070,9 +2070,9 @@
 								else logo_ofr=!--;
 							fi;
 
-							[[ '%spl_logo_type%' = '0' ]] && logo_ofr=!--;
+							[[ '%spl_logo_type%' = '0' ]] &amp;&amp; logo_ofr=!--;
 
-							if [[ '%spl_bg_on%' = '1' ]] && [[ "$(du -s "%tw_splash_png_path%/%tw_splash_png_name%" | cut -f1)" -lt "%of_splash_max_size%" ]];
+							if [[ '%spl_bg_on%' = '1' ]] &amp;&amp; [[ "$(du -s "%tw_splash_png_path%/%tw_splash_png_name%" | cut -f1)" -lt "%of_splash_max_size%" ]];
 									then bg_on=;
 										 cp "%tw_splash_png_path%/%tw_splash_png_name%" "/tmp/orangefox/ramdisk/twres/images/Splash/user.png";
 										 cp "%tw_splash_png_path%/%tw_splash_png_name%" "/twres/images/Splash/user.png";
