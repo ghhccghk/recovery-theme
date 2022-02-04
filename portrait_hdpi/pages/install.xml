@@ -62,6 +62,7 @@
 				</listitem>
 				<listitem name="{@auto_reflashtwrp_chk}">
 					<condition var1="fox_branch" op="&gt;=" var2="11"/>
+					<condition var1="fox_vab_device" var2="1"/>
 					<condition var1="tw_has_boot_slots" var2="1"/>
 					<condition var1="tw_has_repack_tools" var2="1"/>
 					<data variable="tw_auto_reflashtwrp"/>
@@ -227,6 +228,7 @@
 				</listitem>
 				<listitem name="{@auto_reflashtwrp_chk}">
 					<condition var1="fox_branch" op="&gt;=" var2="11"/>
+					<condition var1="fox_vab_device" var2="1"/>
 					<condition var1="tw_has_boot_slots" var2="1"/>
 					<condition var1="tw_has_repack_tools" var2="1"/>
 					<data variable="tw_auto_reflashtwrp"/>
@@ -470,6 +472,7 @@
 
 			<listbox style="settingslist">
 				<condition var1="fox_branch" op="&gt;=" var2="11"/>
+				<condition var1="fox_vab_device" var2="1"/>
 				<condition var1="tw_is_slot_part" var2="1"/>
 				<condition var1="tw_has_boot_slots" var2="1"/>
 				<placement x="0" y="%row6_1a_y%" w="%screen_w%" h="%lb_l1%"/>
