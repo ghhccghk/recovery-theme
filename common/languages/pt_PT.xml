@@ -506,7 +506,6 @@
 		<string name="repacking_image">A fazer Repack de {1}...</string>
 		<string name="repack_image_hdr">Selecionar Imagem</string>
 		<string name="fix_recovery_loop">Resolver Bootloop da Recovery</string>
-		<string name="fix_recovery_loop_confirm">Resolver Bootloop?</string>
 		<string name="fixing_recovery_loop"> A Resolver Bootloop...</string>
 		<string name="fix_recovery_loop_complete">Resolução do Bootloop da Recovery concluída</string>
 		<string name="fixing_recovery_loop_patch">A aplicar o patch ao kernel...</string>

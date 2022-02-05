@@ -45,7 +45,7 @@
 			</text>
 
 			<listbox style="settingslist">
-				<placement x="0" y="%row4_2a_y%" w="%screen_w%" h="%lb_l5%"/>
+				<placement x="0" y="%row4_2a_y%" w="%screen_w%" h="%lb_l6%"/>
 				<listitem name="{@install_reboot_chk}">
 					<condition var1="tw_reboot_system" var2="1"/>
 					<data variable="tw_install_reboot"/>
@@ -53,12 +53,19 @@
 				<listitem name="{@zip_sig_chk}">
 					<data variable="tw_signed_zip_verify"/>
 				</listitem>
-				<listitem name="{@unmount_sys_install=Unmount System before installing a ZIP}">
+				<listitem name="{@unmount_sys_install}">
 					<data variable="tw_unmount_system"/>
 				</listitem>
-				<listitem name="{@unmount_vendor_install=Unmount Vendor before installing a ZIP}">
+				<listitem name="{@unmount_vendor_install}">
 					<condition var1="fox_branch" op="&gt;=" var2="10"/>
 					<data variable="tw_unmount_vendor"/>
+				</listitem>
+				<listitem name="{@auto_reflashtwrp_chk}">
+					<condition var1="fox_branch" op="&gt;=" var2="11"/>
+					<condition var1="fox_vab_device" var2="1"/>
+					<condition var1="tw_has_boot_slots" var2="1"/>
+					<condition var1="tw_has_repack_tools" var2="1"/>
+					<data variable="tw_auto_reflashtwrp"/>
 				</listitem>
 				<listitem name="{@inject_twrp_chk}">
 					<condition var1="tw_has_injecttwrp" var2="1"/>
@@ -204,7 +211,7 @@
 
 			<listbox style="settingslist">
 				<condition var1="tw_fileexists" var2="1"/>
-				<placement x="0" y="%row3_2a_y%" w="%screen_w%" h="%lb_l5%"/>
+				<placement x="0" y="%row3_2a_y%" w="%screen_w%" h="%lb_l4%"/>
 				<listitem name="{@install_reboot_chk}">
 					<condition var1="tw_reboot_system" var2="1"/>
 					<data variable="tw_install_reboot"/>
@@ -212,12 +219,19 @@
 				<listitem name="{@zip_sig_chk}">
 					<data variable="tw_signed_zip_verify"/>
 				</listitem>
-				<listitem name="{@unmount_sys_install=Unmount System before installing a ZIP}">
+				<listitem name="{@unmount_sys_install}">
 					<data variable="tw_unmount_system"/>
 				</listitem>
-				<listitem name="{@unmount_vendor_install=Unmount Vendor before installing a ZIP}">
+				<listitem name="{@unmount_vendor_install}">
 					<condition var1="fox_branch" op="&gt;=" var2="10"/>
 					<data variable="tw_unmount_vendor"/>
+				</listitem>
+				<listitem name="{@auto_reflashtwrp_chk}">
+					<condition var1="fox_branch" op="&gt;=" var2="11"/>
+					<condition var1="fox_vab_device" var2="1"/>
+					<condition var1="tw_has_boot_slots" var2="1"/>
+					<condition var1="tw_has_repack_tools" var2="1"/>
+					<data variable="tw_auto_reflashtwrp"/>
 				</listitem>
 				<listitem name="{@inject_twrp_chk}">
 					<condition var1="tw_has_injecttwrp" var2="1"/>
@@ -437,21 +451,35 @@
 		<page name="flash_image_confirm">
 			<template name="flash_page"/>
 
-			<text style="text_ab_subtitle">
-				<placement x="%col1_x_indent%" y="%row1_2_y%"/>
-				<text>{@install_sel_target}</text>
-			</text>
-
 			<text style="caption">
-				<placement x="%col1_x_caption%" y="%row4_1a_y%"/>
+				<placement x="%col1_x_caption%" y="%row2_1a_y%"/>
 				<text>{@flash_image_select}</text>
 			</text>
 
 			<partitionlist style="partitionlist_radio">
-				<placement x="0" y="%row4_2a_y%" w="%screen_w%" h="%flash_img_part%"/>
+				<placement x="0" y="%row2_2a_y%" w="%screen_w%" h="%lb_l6%"/>
 				<data name="tw_flash_partition"/>
 				<listtype name="flashimg"/>
 			</partitionlist>
+			
+			<text style="caption">
+				<condition var1="fox_branch" op="&gt;=" var2="11"/>
+				<condition var1="tw_is_slot_part" var2="1"/>
+				<condition var1="tw_has_boot_slots" var2="1"/>
+				<placement x="%col1_x_caption%" y="%row5_3a_y%"/>
+				<text>{@options_cptn}</text>
+			</text>
+
+			<listbox style="settingslist">
+				<condition var1="fox_branch" op="&gt;=" var2="11"/>
+				<condition var1="fox_vab_device" var2="1"/>
+				<condition var1="tw_is_slot_part" var2="1"/>
+				<condition var1="tw_has_boot_slots" var2="1"/>
+				<placement x="0" y="%row6_1a_y%" w="%screen_w%" h="%lb_l1%"/>
+				<listitem name="{@flash_ab_both_slots}">
+					<data variable="tw_flash_both_slots"/>
+				</listitem>
+			</listbox>
 
 			<button style="btn_raised_hl">
 				<placement x="%btn_raised_right_x%" y="%row_btn2_y%" placement="1"/>
@@ -476,30 +504,25 @@
 		<page name="flash_image_ab">
 			<template name="flash_page"/>
 
-			<text style="text_ab_subtitle">
-				<placement x="%col1_x_indent%" y="%row1_2_y%"/>
-				<text>{@img_select_type}</text>
-			</text>
-
 			<text style="caption">
-				<placement x="%col1_x_caption%" y="%row4_1a_y%"/>
+				<placement x="%col1_x_caption%" y="%row2_1a_y%"/>
 				<text>{@img_type}</text>
 			</text>
 
 			<listbox>
-				<placement x="0" y="%row4_2a_y%" w="%screen_w%" h="%lb_l2%"/>
+				<placement x="0" y="%row2_2a_y%" w="%screen_w%" h="%lb_l2%"/>
 				<data name="tw_repack_kernel"/>
-				<listitem name="{@recovery_ramdisk}">0</listitem>
-				<listitem name="{@kernel}">1</listitem>
+				<listitem name="Recovery Ramdisk">0</listitem>
+				<listitem name="Kernel">1</listitem>
 			</listbox>
 			
 			<text style="caption">
-				<placement x="%col1_x_caption%" y="%row5_3a_y%"/>
+				<placement x="%col1_x_caption%" y="%row3_3a_y%"/>
 				<text>{@options_cptn}</text>
 			</text>
 
 			<listbox style="settingslist">
-				<placement x="0" y="%row6_1a_y%" w="%screen_w%" h="%lb_l1%"/>
+				<placement x="0" y="%row4_1a_y%" w="%screen_w%" h="%lb_l1%"/>
 				<listitem name="{@repack_backup_first}">
 					<data variable="tw_repack_backup_first"/>
 				</listitem>

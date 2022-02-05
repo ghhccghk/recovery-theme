@@ -786,31 +786,16 @@
 
 			<text style="text_ab_title">
 				<placement x="%col1_x_indent%" y="%ab_bc_y%"/>
-				<text>{@install_image_hdr}</text>
+				<text>{@flash_img_confirm}</text>
 			</text>
 
 			<text style="text_ab_title">
 				<placement x="%col1_x_indent%" y="%row1_2_y%" placement="2"/>
-				<text>{@flash_img_confirm}</text>
-			</text>
-
-			<text style="caption">
-				<placement x="%col1_x_caption%" y="%row2_1a_y%"/>
-				<text>{@file}</text>
-			</text>
-
-			<text style="text_body1">
-				<placement x="%col1_x_caption%" y="%row2_2a_y%"/>
 				<text>%tw_file%</text>
 			</text>
 
-			<text style="caption">
-				<placement x="%col1_x_caption%" y="%row3_1a_y%"/>
-				<text>{@folder}</text>
-			</text>
-
-			<text style="text_body1">
-				<placement x="%col1_x_caption%" y="%row3_2a_y%"/>
+			<text style="text_ab_subtitle">
+				<placement x="%col1_x_indent%" y="%row1_2_y%"/>
 				<text>%tw_zip_location%</text>
 			</text>
 
