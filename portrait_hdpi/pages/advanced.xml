@@ -143,7 +143,7 @@
 				<listitem name="{@reflash_twrp}">
 					<icon res="bs_adv_se"/>
 					<condition var1="fox_branch" op="&gt;=" var2="11"/>
-					<condition var1="fox_vab_device" var2="1"/>
+					<!--condition var1="fox_vab_device" var2="1"/-->
 					<condition var1="utils_show" var2="1"/>
 					<condition var1="tw_has_boot_slots" var2="1"/>
 					<condition var1="tw_has_repack_tools" var2="1"/>
