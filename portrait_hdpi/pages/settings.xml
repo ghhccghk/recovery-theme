@@ -19,6 +19,7 @@
 				</listitem>
 				<listitem name="{@fox_ota_lite}">
 					<condition var1="of_no_miui_features" var2="1"/>
+					<condition var1="of_ab_device" op="!=" var2="1"/>
 					<icon res="bs_btn_set_ota"/>
 					<action function="page">fox_ota_lite</action>
 				</listitem>
