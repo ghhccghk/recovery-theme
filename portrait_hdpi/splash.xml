@@ -38,12 +38,12 @@
 
 			<text style="menu_text">
 				<placement x="540" y="%of%" placement="4"/>
-				<font resource="of" color="#ffffff"/>
+				<font resource="of" color="#000000"/>
 				<text>OrangeFox</text>
 			</text>
 			<text style="menu_text">
 				<placement x="540" y="%rec%" placement="4"/>
-				<font resource="recovery" color="#ffffff"/>
+				<font resource="recovery" color="#000000"/>
 				<text>Recovery</text>
 			</text>
 		</page>

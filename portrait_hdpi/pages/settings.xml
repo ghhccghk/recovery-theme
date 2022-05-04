@@ -991,25 +991,25 @@
 
 
 			<text>
-				<font resource="about" color="#ffffff"/>
+				<font resource="about" color="#000000"/>
 				<placement x="%about_txt_x%" y="%about_logo_y%"/>
 				<text>OrangeFox Recovery</text>
 			</text>
 			
 			<text>
-				<font resource="orangefont" color="#ffffff"/>
+				<font resource="orangefont" color="#000000"/>
 				<placement x="%about_txt_x%" y="%about_txt2_y%"/>
 				<text>{@version}: %fox_actual_build%</text>
 			</text>
 
 			<text>
-				<font resource="orangefont" color="#ffffff"/>
+				<font resource="orangefont" color="#000000"/>
 				<placement x="%about_txt_x%" y="%about_txt3_y%"/>
 				<text>{@build_type}: %fox_build_type1%</text>
 			</text>
 
 			<text>
-				<font resource="orangefont" color="#ffffff"/>
+				<font resource="orangefont" color="#000000"/>
 				<placement x="%about_txt_x%" y="%about_txt4_y%"/>
 				<text>{@abt_device}: %fox_compatibility_fox_device%</text>
 			</text>
