@@ -17,8 +17,9 @@
 	</resources>
 
 	<variables>
-		<variable name="of" value="%screen_h%-400"/>
-		<variable name="rec" value="%screen_h%-320"/>
+		<variable name="of" value="%screen_h%-480"/>
+		<variable name="rec" value="%screen_h%-400"/>
+		<variable name="logo" value="%center_y%-80"/>
 	</variables>
 
 	<pages>
@@ -33,7 +34,7 @@
 			</image>
 			<image>
 				<image resource="splash_logo_w"/>
-				<placement x="540" y="%center_y%" placement="4"/>
+				<placement x="540" y="%logo%" placement="4"/>
 			</image>
 
 			<text style="menu_text">
