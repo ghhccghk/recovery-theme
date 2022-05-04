@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <recovery>
+		<variables>
+		<variable name="about_hh" value="%about_title_h%-3"/>
+		<variable name="about_hhh" value="%card2_y%-3"/>
+		<variable name="about_hhhh" value="%card3_y%-3"/>
+	</variables>
 	<pages>
 		<!-- Settings -->
 		<page name="settings">
@@ -1023,7 +1028,7 @@
 
 			<image>
 				<image resource="card"/>
-				<placement x="0" y="%about_title_h%"/>
+				<placement x="0" y="%about_hh%"/>
 			</image>
 
 			<text style="about_name">
@@ -1064,7 +1069,7 @@
 
 			<image>
 				<image resource="card"/>
-				<placement x="0" y="%card2_y%"/>
+				<placement x="0" y="%about_hhh%"/>
 			</image>
 
 			<text style="about_name">
@@ -1104,7 +1109,7 @@
 			
 			<image>
 				<image resource="card"/>
-				<placement x="0" y="%card3_y%"/>
+				<placement x="0" y="%about_hhhh%"/>
 			</image>
 
 			<text style="about_name">
